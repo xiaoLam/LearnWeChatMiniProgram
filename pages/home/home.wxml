@@ -1,3 +1,23 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello World</text>
 <button size="mini">按钮</button>
+
+<!-- 第二种获取用户信息的方法 -->
+<!-- 使用button组件 -->
+<!-- 设置属性open-type, 值为 getUserInfo -->
+<!-- 并且绑定bindgetuserinfo点击事件 -->
+<button 
+size="mini"
+open-type="getUserInfo" 
+bindgetuserinfo="handleGetUserInfo" >
+获取授权
+</button>
+
+<!-- 第三种获取用户信息的方法 -->
+<!-- 这个方法并不能存储用户信息, 只能将用户的信息做一个展示 -->
+<!-- 使用 open-data 组件 -->
+<!-- 并且设置需要展示的type属性即可 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view wx:for="{{list}}">{{item.title}}</view>

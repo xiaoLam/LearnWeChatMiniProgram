@@ -1,30 +1,37 @@
+// 把调用App() 方法称为注册一个小程序示例
 App({
-
-  /**
-   * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
-   */
-  onLaunch: function () {
-    
+  // 小程序初始化完毕后调用
+  onLaunch: function (options) {
+    // 可以在这里获取用户的信息
+    // 实际上onLaunch生命周期函数中也会想onShow有一个参数options
+    console.log(options);
   },
 
-  /**
-   * 当小程序启动，或从后台进入前台显示，会触发 onShow
-   */
+  // 小程序显示的时候调用
   onShow: function (options) {
-    
+    // 可以在这里判断用户进入小程序的常见
+    // options参数中就包含了scene
+    console.log(options);
+    switch (options.scene) {
+      case 1001:
+        break;
+      case 1005:
+        break
+    }
+
+    // 可以在这里获取用户的信息
+    // 通过 wx.getUserInfo() 接口
+    wx.getUserInfo({
+      success : (res) => {
+        console.log(res);
+      }
+    })
+    // 但是注意wx.getUserInfo() 这个接口有可能在以后被弃用
   },
 
-  /**
-   * 当小程序从前台进入后台，会触发 onHide
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息
-   */
-  onError: function (msg) {
-    
+  // 定义一些共享数据
+  gobalData : {
+    name : "xiaoLam",
+    age : 18
   }
 })
