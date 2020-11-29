@@ -1,3 +1,18 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello World</text>
-<button size="mini">按钮</button>
+<!-- 1.小程序的数据绑定: 跟vue一样也是通过mustache语法 -->
+<!-- 首先在home.js中的Page对象中的data属性中定义好相关的数据 -->
+<!-- 然后通过mutache语法使用变量即可 -->
+<!-- 这里的view是组件的意思, 每一个标签都是一个组件 -->
+<view>Hello {{name}}</view>
+<view>我的年龄是{{age}}</view>
+
+<!-- 2.小程序中的列表展示 -->
+<!-- 在小程序中遍历一个数据是通过 wx:for="{{对应数据}}" 来实现的(注意这里调用对应的数据也是要使用mustache语法的) -->
+<!-- 在使用wx:for 的时候程序内部会自动生成item, 这个item就是对应数据中的每一项 -->
+<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view>
+
+<!-- 3.小程序中的事件绑定 -->
+<!-- 在小程序中绑定点击事件是通过bindtap="事件名称" 来达到的 -->
+<view>当前计数是: {{counter}}</view>
+<button size="mini" bindtap="increBtn">+</button>
+<button size="mini" bindtap="decreBtn">-</button>
