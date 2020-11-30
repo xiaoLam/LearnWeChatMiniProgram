@@ -1,0 +1,22 @@
+<!--pages/scroll/scroll.wxml-->
+<!-- scroll-view中有很多属性, 这里只演示部分属性 -->
+<!-- 1.水平滚动 -->
+<scroll-view class="container1" scroll-x>
+  <view class="scroll-item1" wx:for="{{10}}">{{item}}</view>
+</scroll-view>
+
+<!-- 2.垂直滚动 -->
+<scroll-view class="container2" scroll-y>
+  <view class="scroll-item2" wx:for="{{10}}">{{item}}</view>
+</scroll-view>
+
+<!-- 3.滚动事件 -->
+<!-- bindscroll监听滚动事件 -->
+<!-- bindscrolltoupper监听滚动到最上或最左 -->
+<!-- bindscrolltolower监听滚动到最下或最右 -->
+<scroll-view bindscrolltoupper="handleScrollToUpper"
+             bindscrolltolower="handleScrollToLower"
+             bindscroll="handleScroll" 
+             class="container2" scroll-y>
+  <view class="scroll-item2" wx:for="{{10}}">{{item}}</view>
+</scroll-view>

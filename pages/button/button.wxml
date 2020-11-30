@@ -1,0 +1,23 @@
+<!--pages/button/button.wxml-->
+<!-- 1.button组件基本使用 -->
+<button>按钮</button>
+
+<!-- 2.size属性, 两个值default默认尺寸, mini小尺寸 -->
+<button size="mini">按钮</button>
+
+<!-- 3.type属性, 三个值primary(绿色主题), default(默认), warn(红色主题) -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!-- 4.plain属性, 布尔值, 设置镂空效果, 就是背景透明 -->
+<button size="mini" plain>按钮</button>
+
+<!-- 5.loading属性, 布尔值, 设置按钮前面有没有loading动画 -->
+<button size="mini" loading="{{true}}">按钮</button>
+
+<!-- 6.disabled属性, 布尔值, 设置按钮是否可用 -->
+<button size="mini" disabled>按钮</button>
+
+<!-- 7.hover-class属性, 将按钮点击下去的样式绑定到一个class中 -->
+<button hover-class="pressed">按钮</button>

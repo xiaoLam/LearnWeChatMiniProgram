@@ -1,0 +1,32 @@
+/* pages/view/view.wxss */
+.box {
+  background-color: red;
+}
+
+.defaultbox {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+}
+.active-class {
+  background-color: pink;
+}
+
+.father-box {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+.father-box-active {
+  background-color: orangered;
+}
+.son-box {
+  width: 100px;
+  height: 100px;
+  background-color: powderblue;
+}
+.son-box-active {
+  background-color: skyblue;
+}

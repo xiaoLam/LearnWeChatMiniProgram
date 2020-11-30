@@ -1,0 +1,22 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view组件的基本用法 -->
+<!-- view组件, 类似于div容器盒子, 是一个块级元素 -->
+<view class="box">hello</view>
+<view>World</view>
+
+<!-- 2.跟button组件一样具有 hover-class 属性 -->
+<!-- 也是跟button组件的hover-class 属性使用方法一样 -->
+<view class="defaultbox" hover-class="active-class"></view>
+
+<!-- 3.hover-stay-time属性 -->
+<!-- 我们发现在2.演练内容的时候, 点击view后, 手指松开后点击态有一个保留时间 -->
+<!-- 这个保留事件默认为400毫秒, 可以通过hover-stay=time属性更改 -->
+<view class="defaultbox" hover-class="active-class" hover-stay-time="0"></view>
+
+<!-- 4.view组件点击后hover-class属性的冒泡 -->
+<!-- 如果有view组件的嵌套, 而且两个view组件都有各自的hover-calss 属性 -->
+<!-- 那么当我们点击子组件的view的时候因为冒泡也会触发父组件的hover-class -->
+<!-- 此时可以通过设置hover-stop-propagetion为false来阻止冒泡事件 -->
+<view class="father-box" hover-class="father-box-active">
+  <view class="son-box" hover-class="son-box-active" hover-stop-propagation="false"></view>
+</view>

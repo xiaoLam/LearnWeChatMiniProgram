@@ -1,0 +1,26 @@
+<!--pages/text/text.wxml-->
+<!-- 1.text组件用于显示文本, 类似于span标签, 是行内元素 -->
+<!-- 如果text与text组件之间需要换行的话可以使用\n -->
+<text>hello Wrold\n</text>
+<text>我是xiaoLam\n</text>
+
+<!-- 2.text组件中的文本默认是不可以选中的 -->
+<!-- 可以通过设置user-select属性为true, 修改为可以选中 -->
+<!-- 注意属性值也需要使用mustache语法 -->
+<text user-select="{{true}}">我是可以选中的文本</text>
+<!-- 简便写法 -->
+<text user-select>我是可以选中的文本\n</text>
+
+<!-- 3.text组件中的文本空格大小可以通过设置space属性来设置 -->
+<!-- space有三个值 emsp, ensp, nbsp -->
+<text>hello world\n</text>
+<!-- nbsp为根据字体设置的空格大小 -->
+<text space="nbsp">hello world\n</text>
+<!-- ensp为半个中文字体大小 -->
+<text space="ensp">hello world\n</text>
+<!-- emsp为一个中文字体大小 -->
+<text space="emsp">hello world\n</text>
+
+<!-- 4.text组件中的文本是否解码通过decode属性来设置 -->
+<text>5 &gt; 3\n</text>
+<text decode>5 &gt; 3</text>
