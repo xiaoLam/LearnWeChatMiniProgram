@@ -1,0 +1,32 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 1.小程序不允许组件中使用js中的函数 -->
+<!-- <view>{{2.66243.toFixed(2)}}</view> -->
+
+<!-- 2.使用wxs以达到组件中调用函数的目的 -->
+<!-- 2.1 直接在wxml中使用wxs标签定义 -->
+<!-- <wxs module="info">
+  // 注意wxs中不能使用ES6语法
+  var name = "xiaoLam";
+  var age = 18;
+  function numberFix(num) {
+    return num.toFixed(2)
+  }
+  // 注意要使用commonJS规范导出变量和函数
+  module.exports = {
+    name : name,
+    age : age,
+    numberFix: numberFix
+  }
+</wxs> -->
+
+<!-- 2.2 单独定义在的一个wxs文件中,再使用wxs标签进行引用 -->
+<!-- 注意wxs标签中使用的src属性中的路径必须是相对路径 -->
+<!-- 而且也是需要module属性的 -->
+<wxs src="../../wxs/info.wxs" module="info"/>
+
+<view>{{info.name}}</view>
+<view>{{info.numberFix(2.6654321)}}</view>
+
+<!-- 练习 -->
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{format.dateFormat(nowTime,"yyyy-MM-dd hh:mm:ss")}}</view>

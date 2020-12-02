@@ -1,0 +1,12 @@
+// 注意wxs中不能使用ES6语法
+var name = "xiaoLam";
+var age = 18;
+function numberFix(num) {
+  return num.toFixed(2)
+}
+// 注意要使用commonJS规范导出变量和函数
+module.exports = {
+  name : name,
+  age : age,
+  numberFix: numberFix
+}

@@ -1,0 +1,4 @@
+<view>
+  <include src="./view.wxml"></include>
+  <view>哈哈哈</view>
+</view>

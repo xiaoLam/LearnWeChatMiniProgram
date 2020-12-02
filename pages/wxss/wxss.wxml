@@ -1,0 +1,25 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1.样式的设置有三种方式 -->
+<!-- 1.1 行内样式(内联样式), 通过style属性设置, 跟css一样用法 -->
+<view style="color: red; font-size: 32px">哈哈哈</view>
+
+<!-- 1.2 页面样式, 通过class或者id绑定在page.wxss中的样式 -->
+<view class="page-class">呵呵呵</view>
+
+<!-- 1.3 全局样式, 通过class或者id绑定在app.wxss中的样式 -->
+<view class="app-class">嘿嘿嘿</view>
+
+<!-- 注意如果同一个组件同时拥有三种方式的样式的话 -->
+<!-- 其优先级为 -->
+<!-- 行内样式 > 页面样式 > 全局样式 -->
+
+<!-- 2.wxss中的自适应单位rpx -->
+<!-- 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。-->
+<!-- 在iphone6s中 1px = 0.5rpx -->
+<!-- 所以在不同的屏幕宽度中, rpx和px的转换率是不一样的, 这样就达到了自适应的效果 -->
+<view class="px-class">宽高100px</view>
+<view class="rpx-class">宽高200rpx</view>
+
+<!-- 3. 微信官方提高了一个UI库 -->
+<!-- 跟bootstrap一样的使用, 最好还是自己写, 这样可控性强 -->
+<!-- 不要用这个库了, 这个库如果想要用其中的一种样式, 居然要将全部的样式文件引入, 蠢得离谱 -->

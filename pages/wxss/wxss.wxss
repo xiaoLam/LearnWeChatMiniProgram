@@ -1,0 +1,16 @@
+/* pages/wxss/wxss.wxss */
+.page-class {
+  color: yellow;
+  font-size: 32px;
+}
+
+.px-class {
+  background-color: skyblue;
+  height: 100px;
+  width: 100px;
+}
+.rpx-class {
+  background-color: pink;
+  height: 200rpx;
+  width: 200rpx;
+}
