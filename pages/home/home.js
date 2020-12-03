@@ -1,66 +1,52 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    titles : ['衣服', '裤子', '鞋子']
+  },
+  handleBtnTap() {
+    console.log("按钮发生点击");
+  },
+  handleTouchStart() {
+    console.log("handleTouchStart");
+  },
+  handleTouchMove() {
+    console.log("handleTouchMove");
+  },
+  handleTap() {
+    console.log("handleTap");
+  },
+  handleLongpress() {
+    console.log("handleLongpress");
+  },
+  handleTouchEnd() {
+    console.log("handleTouchEnd");
+  },
+  handleEventClick(event) {
+    console.log(event);
+  },
+  itemClick(event) {
+    console.log(event);
+    const index = event.target.dataset.index;
+    const item = event.target.dataset.item;
+    console.log(index, item);
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleCaptureBind1() {
+    console.log('handleCaptureBind1');
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleBind1() {
+    console.log('handleBind1');
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleCaptureBind2() {
+    console.log('handleCaptureBind2');
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleBind2() {
+    console.log('handleBind2');
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleCaptureBind3() {
+    console.log('handleCaptureBind3');
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleBind3() {
+    console.log('handleBind3');
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

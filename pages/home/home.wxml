@@ -1,3 +1,50 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello World</text>
-<button size="mini">按钮</button>
+<!-- 1.事件绑定的两种方式 -->
+<!-- 1.1 通过bind绑定 -->
+<button size="mini" bindtap="handleBtnTap">按钮</button>
+<!-- 等价于 -->
+<button size="mini" bind:tap="handleBtnTap">按钮</button>
+
+<!-- 1.2 通过catch绑定 -->
+<button size="mini" catchtap="handleBtnTap">按钮</button>
+<!-- 等价于 -->
+<button size="mini" catch:tap="handleBtnTap">按钮</button>
+
+<!-- 2. 常见的组件事件 -->
+<!-- 基本上所有的组件都有这几种事件类型 -->
+<view class="box"
+      bind:touchstart="handleTouchStart"
+      bind:touchmove="handleTouchMove"
+      bind:tap="handleTap"
+      bind:longpress="handleLongpress"
+      bind:touchend="handleTouchEnd"></view>
+
+<!-- 3. 事件对象的解析 -->
+<button size="mini" bind:tap="handleEventClick">事件对象</button>
+
+<!-- 4. 事件参数的传递 -->
+<!-- 事件的参数传递时通过 data- 传递的 -->
+<!-- 给事件组件设置 data- 需要传递的参数 -->
+<!-- 然后再事件对象event中的target对象中的dataset对象中可以查找到对应的参数 -->
+<view class="currentBar">
+  <block wx:for="{{titles}}" wx:key="*this">
+    <view class="bar-item" 
+          bind:tap="itemClick"
+          data-index="{{index}}"
+          data-item="{{item}}"
+          >{{item}}</view>
+  </block>
+</view>
+
+<!-- 5.事件捕获和事件冒泡 -->
+<view class="box1"
+      capture-bind:tap="handleCaptureBind1"
+      bind:tap="handleBind1">
+  <view class="box2"
+      capture-bind:tap="handleCaptureBind2"
+      bind:tap="handleBind2">
+    <view class="box3"
+          capture-catch:tap="handleCaptureBind3"
+          bind:tap="handleBind3"></view>
+  </view>  
+</view>

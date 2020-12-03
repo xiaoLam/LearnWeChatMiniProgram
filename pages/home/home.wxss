@@ -3,3 +3,31 @@
   color: red;
   font-size: 20px;
 }
+.box {
+  height: 200rpx;
+  width: 200rpx;
+  background-color: orange;
+}
+.currentBar {
+  display: flex;
+}
+.bar-item {
+  flex: 1;
+  text-align: center;
+}
+
+.box1 {
+  height: 600rpx;
+  width: 600rpx;
+  border: 2px solid red;
+}
+.box2 {
+  height: 400rpx;
+  width: 400rpx;
+  border: 2px solid yellow;
+}
+.box3 {
+  height: 200rpx;
+  width: 200rpx;
+  border: 2px solid green;
+}
