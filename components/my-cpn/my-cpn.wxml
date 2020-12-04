@@ -1,0 +1,3 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<view class="title">我是自定义组件的标题</view>
+<view class="content">{{message}}</view>

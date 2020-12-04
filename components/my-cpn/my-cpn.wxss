@@ -1,0 +1,12 @@
+/* components/my-cpn/my-cpn.wxss */
+.title {
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.content {
+  font-size: 48rpx;
+}
+/* 组件内使用ID选择器直接报错 */
+/* #testID {
+  background: orange;
+} */

@@ -1,0 +1,5 @@
+<!--components/my-slot/my-slot.wxml-->
+<!-- 单个插槽的使用, 跟vue中使用插槽一模一样 -->
+<view>我是slot的头部</view>
+<slot/>
+<view>我是slot的尾部</view>

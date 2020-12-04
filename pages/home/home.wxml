@@ -1,3 +1,46 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello World</text>
 <button size="mini">按钮</button>
+
+<!-- <my-cpn></my-cpn>
+<my-cpn/>
+<my-cpn class="test"/> -->
+
+<!-- 使用全局组件 -->
+<!-- <test-cpn class="testStyle"/> -->
+
+<!-- 给props组件传递数据/样式 -->
+<my-props title="我是传递过去的标题" titleclass="titleclass"/>
+
+<!-- 子组件向父组件传递数据 -->
+<!-- 像vue一样通过自定义事件 -->
+<view>{{counter}}</view>
+<my-event bind:counterIncrement="counterIncrement" />
+
+<!-- 封装的tab-control练习 -->
+<l-tab-control titles="{{['热门','精选','推荐']}}" bind:itemClick="handleTabClick"/>
+
+<!-- 获取组件对象的方式 -->
+<button size="mini" bind:tap="handleCpnIncre">修改组件内的数据</button>
+<my-sel id="my-selCpn" />
+
+<!-- 单个插槽的使用, 跟vue一模一样 -->
+<my-slot>
+  <button size="mini">插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <image src="https://tse4-mm.cn.bing.net/th/id/OIP.VlkuhprzKclor9F502TV9wHaEK?pid=Api&rs=1"></image>
+</my-slot>
+
+<my-slot>
+  <slider></slider>
+</my-slot>
+
+<!-- 多个插槽的使用, 基本跟vue一模一样, 但是为了和vue不一样, 使用多个插槽的时候要在组件的js文件中的options属性中设置 multipleSlots属性值为true -->
+<button size="mini" bind:tap="handleCpnShow">控制组件渲染</button>
+<my-mslot wx:if="{{isShow}}">
+  <image slot="slot2" src="https://tse4-mm.cn.bing.net/th/id/OIP.VlkuhprzKclor9F502TV9wHaEK?pid=Api&rs=1"></image>
+  <slider slot="slot1"></slider>
+</my-mslot>
+

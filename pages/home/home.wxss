@@ -3,3 +3,19 @@
   color: red;
   font-size: 20px;
 }
+.test {
+  color: red;
+}
+/* 使用标签选择器会对组件的样式产生影响 */
+test-cpn {
+  font-size: 70rpx;
+}
+/* 给组件标签添加一个class, 给对应的class添加样式也会产生影响 */
+.testStyle {
+  color: red;
+}
+
+/* 给组件传递过去的样式 */
+.titleclass {
+  color: red;
+}

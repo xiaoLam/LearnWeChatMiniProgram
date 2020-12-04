@@ -1,0 +1,9 @@
+<!--components/my-mslot/my-mslot.wxml-->
+<!-- 多个插槽的使用, 跟vue一模一样 -->
+<!-- 需要在组件的js文件中的options对象中设置 multipleSlots属性值为 true -->
+
+<view>我是mslot的头部</view>
+<slot name="slot1"></slot>
+<slot name="slot2"></slot>
+<slot name="slot3"></slot>
+<view>我是mslot的尾部</view>
