@@ -30,7 +30,7 @@
     "bundle": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.4",
+  "libVersion": "2.14.1",
   "appid": "wxca51ffac5b941ffb",
   "projectname": "01-FirstMiniProgram",
   "debugOptions": {

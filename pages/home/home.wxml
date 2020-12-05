@@ -1,3 +1,19 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello World</text>
 <button size="mini">按钮</button>
+
+<!-- 1. toast弹窗 -->
+<button size="mini" bind:tap="handleToastClick" >showToast</button>
+
+<!-- 2.modal弹窗 -->
+<button size="mini" bind:tap="handleModalClick" >showModal</button>
+
+<!-- 3.loading弹窗 -->
+<button size="mini" bind:tap="handleLoadingClick" >showLoading</button>
+
+<!-- 4.actionSheet底部弹窗 -->
+<button size="mini" bind:tap="handelActionSheetClick" >showActionSheet</button>
+
+<!-- 分享给朋友可以通过页面中的按钮来实现 -->
+<!-- 设置button属性 open-type值为share -->
+<button size="mini" open-type="share">分享</button>
