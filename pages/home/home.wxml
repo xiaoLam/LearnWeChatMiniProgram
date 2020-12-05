@@ -1,3 +1,29 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello World</text>
 <button size="mini">按钮</button>
+
+<!-- 通过navigator实现跳转页面 -->
+<!-- 1. 最简单的页面跳转, url属性中填写需要跳转至的页面路径 -->
+<navigator url="/pages/detail/detail">跳转至详情页</navigator>
+
+<!-- 2. 通过open-type, 设置跳转方式 -->
+<!-- 2.1 navigate, 默认值, 保留当前页面, 跳转至某个页面(这个方法可以通过左上角返回按钮返回) -->
+<navigator url="/pages/detail/detail" open-type="navigate">跳转至详情页(navigate)</navigator>
+
+<!-- 2.2 redirect, 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。(这个方法左上角没有返回按钮, 而是出现返回至主页按钮) -->
+<navigator url="/pages/detail/detail" open-type="redirect">跳转至详情页(redirect)</navigator>
+
+<!-- 2.3 switchTab, 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面(该方法只能跳转tabBar中的页面,如果tabBar中没有指定的页面, 则不会跳转) -->
+<navigator url="/pages/about/about" open-type="switchTab">跳转至关于页(switchTab)</navigator>
+
+<!-- 2.4 reLaunch, 关闭所有的页面, 打开指定的某个页面 -->
+<navigator url="/pages/detail/detail" open-type="reLaunch">关闭所有页面,打开详情页(reLaunch)</navigator>
+
+
+<!-- 3. 页面跳转的时候传递数据 -->
+<navigator url="/pages/detail/detail?name=xiaoLam&age=18">跳转至详情页(传递数据)</navigator>
+<view>{{message}}</view>
+
+<!-- 4. 通过接口来进行页面跳转 -->
+<button size="mini" bind:tap="handlePushPage">跳转至详情页</button>
+

@@ -1,0 +1,12 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<!-- navigator组件中的 open-type属性还有 navigateBack属性 -->
+<!-- 这个属性用于返回上一个页面 -->
+<navigator open-type="navigateBack">返回上一个页面</navigator>
+
+<!-- 如果想要返回多级页面, 则还需要给navigator组件添加一个delta属性, 值为需要返回的级数 -->
+<!-- 注意这个属性只有存在open-type="navigateBack"时生效 -->
+<navigator open-type="navigateBack" delta="2">返回多级</navigator>
+
+<navigator url="/pages/about/about">跳转至关于页(switchTab)</navigator>
